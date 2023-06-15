@@ -9,14 +9,14 @@ import Foundation
 
 struct ToDo: Equatable {
     let id = UUID()
-    let title: String
+    var title: String
     var isComplete: Bool
     var dueDate: Date
     var notes: String
     
-//    static func ==(lhs: ToDo, rhs: ToDo) -> Bool {
-//        return lhs.id == rhs.id
-//    }
+    static func ==(lhs: ToDo, rhs: ToDo) -> Bool {
+        return lhs.id == rhs.id
+    }
     
     static func loadToDos () -> [ToDo]? {
         return nil
